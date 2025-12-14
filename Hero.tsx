@@ -1,5 +1,5 @@
 import React from 'react';
-import { WHATSAPP_LINK } from '../constants';
+import { WHATSAPP_LINK } from './constants';
 import { ArrowRight, Star } from 'lucide-react';
 import GradientBlinds from './GradientBlinds';
 
@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
       {/* Background Elements */}
       <div className="absolute inset-0 bg-brand-light">
         <div className="absolute inset-0 opacity-40">
-           <GradientBlinds
+          <GradientBlinds
             gradientColors={['#F2F2EF', '#D4AF37', '#F2F2EF']}
             angle={45}
             noise={0.3}
@@ -28,8 +28,17 @@ const Hero: React.FC = () => {
 
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-black/5 shadow-sm mb-8 animate-fade-in-up">
-            <Star size={14} className="text-brand-gold fill-brand-gold" />
-            <span className="text-xs font-medium tracking-[0.2em] text-gray-500 uppercase">Madrid's Premier Private Tour</span>
+          <Star size={14} className="text-brand-gold fill-brand-gold" />
+          <span className="text-xs font-medium tracking-[0.2em] text-gray-500 uppercase">Madrid's Premier Private Tour</span>
+        </div>
+
+        {/* Logo */}
+        <div className="mb-8 animate-fade-in-up [animation-delay:100ms]">
+          <img
+            src="/logo.png"
+            alt="Tuk Tuk Tours Experience Logo"
+            className="w-48 md:w-64 mx-auto"
+          />
         </div>
 
         <h1 className="text-5xl md:text-7xl lg:text-9xl font-display font-bold text-brand-black uppercase tracking-tight leading-none mb-6 animate-fade-in-up [animation-delay:200ms]">
@@ -38,7 +47,7 @@ const Hero: React.FC = () => {
         </h1>
 
         <p className="max-w-2xl mx-auto text-gray-600 font-light text-lg md:text-xl mb-12 leading-relaxed animate-fade-in-up [animation-delay:400ms]">
-          Discover the soul of Madrid in silence and style. <br className="hidden md:block"/>
+          Discover the soul of Madrid in silence and style. <br className="hidden md:block" />
           100% Electric. Private. Exclusive.
         </p>
 
