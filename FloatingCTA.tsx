@@ -1,6 +1,6 @@
 import React from 'react';
 import { MessageCircle, Star, Map } from 'lucide-react';
-import { WHATSAPP_LINK, GOOGLE_REVIEW_LINK } from '../constants';
+import { WHATSAPP_LINK, GOOGLE_REVIEW_LINK } from './constants';
 
 const FloatingCTA: React.FC = () => {
   const commonClasses = "flex items-center justify-center gap-3 px-6 py-4 rounded-full shadow-lg transition-all duration-300 hover:-translate-y-1 w-64 pointer-events-auto";
@@ -8,7 +8,7 @@ const FloatingCTA: React.FC = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4 pointer-events-none">
-      
+
       {/* 1. Book Now (Gold) - TOP */}
       <a
         href={WHATSAPP_LINK}
@@ -28,7 +28,7 @@ const FloatingCTA: React.FC = () => {
         className={`${commonClasses} bg-white text-brand-black border border-gray-200 hover:border-brand-gold/50`}
       >
         <div className="w-6 h-6 rounded-full bg-brand-gold/20 flex items-center justify-center shrink-0">
-            <Star size={14} className="fill-brand-gold text-brand-gold" />
+          <Star size={14} className="fill-brand-gold text-brand-gold" />
         </div>
         <span className={labelClasses}>Rate Experience</span>
       </a>

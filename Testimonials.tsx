@@ -1,6 +1,6 @@
 import React from 'react';
 import { Star, MapPin } from 'lucide-react';
-import { REVIEWS, GOOGLE_MAPS_LINK } from '../constants';
+import { REVIEWS, GOOGLE_MAPS_LINK } from './constants';
 
 const Testimonials: React.FC = () => {
   return (
@@ -10,20 +10,20 @@ const Testimonials: React.FC = () => {
 
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-            <div>
-                <span className="text-brand-gold font-display text-sm tracking-widest uppercase mb-2 block">Social Proof</span>
-                <h2 className="text-4xl md:text-5xl font-display font-bold text-brand-black">Trusted by Travelers</h2>
-            </div>
-            
-            {/* Desktop Button - GREEN */}
-            <a 
-                href={GOOGLE_MAPS_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden md:flex items-center gap-2 px-6 py-3 bg-[#15803d] text-white font-display font-bold uppercase tracking-widest text-sm rounded-lg hover:bg-[#14532d] transition-all duration-300 shadow-md hover:shadow-lg mt-6 md:mt-0 transform hover:-translate-y-1"
-            >
-                Read on Google Maps <MapPin size={16} />
-            </a>
+          <div>
+            <span className="text-brand-gold font-display text-sm tracking-widest uppercase mb-2 block">Social Proof</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-brand-black">Trusted by Travelers</h2>
+          </div>
+
+          {/* Desktop Button - GREEN */}
+          <a
+            href={GOOGLE_MAPS_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:flex items-center gap-2 px-6 py-3 bg-[#15803d] text-white font-display font-bold uppercase tracking-widest text-sm rounded-lg hover:bg-[#14532d] transition-all duration-300 shadow-md hover:shadow-lg mt-6 md:mt-0 transform hover:-translate-y-1"
+          >
+            Read on Google Maps <MapPin size={16} />
+          </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -42,17 +42,17 @@ const Testimonials: React.FC = () => {
             </div>
           ))}
         </div>
-        
+
         {/* Mobile Button - GREEN */}
         <div className="mt-12 text-center md:hidden">
-             <a 
-                href={GOOGLE_MAPS_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#15803d] text-white font-display font-bold uppercase tracking-widest text-sm rounded-lg hover:bg-[#14532d] transition-all duration-300 shadow-md"
-            >
-                Read on Google Maps <MapPin size={16} />
-            </a>
+          <a
+            href={GOOGLE_MAPS_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#15803d] text-white font-display font-bold uppercase tracking-widest text-sm rounded-lg hover:bg-[#14532d] transition-all duration-300 shadow-md"
+          >
+            Read on Google Maps <MapPin size={16} />
+          </a>
         </div>
       </div>
     </section>

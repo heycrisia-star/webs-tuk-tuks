@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Clock, Check, MapPin } from 'lucide-react';
-import { Tour } from '../types';
+import { Tour } from './types';
 
 interface TourCardProps {
   tour: Tour;
@@ -29,34 +29,34 @@ const TourCard: React.FC<TourCardProps> = ({ tour }) => {
         <h3 className="text-3xl font-display font-bold text-brand-black mb-4 group-hover:text-brand-gold transition-colors duration-300">
           {tour.title}
         </h3>
-        
+
         <p className="text-gray-500 font-light text-sm leading-relaxed mb-8 border-l-2 border-brand-gold/30 pl-4">
           {tour.description}
         </p>
 
         <div className="mt-auto">
-            <button 
-                onClick={() => setIsExpanded(!isExpanded)}
-                className="w-full flex items-center justify-between text-sm text-gray-400 hover:text-brand-black transition-colors py-3 border-t border-black/5"
-            >
-                <span className="uppercase tracking-widest text-xs font-semibold">
-                    {isExpanded ? 'Hide Route Details' : 'View Route Details'}
-                </span>
-                {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-            </button>
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="w-full flex items-center justify-between text-sm text-gray-400 hover:text-brand-black transition-colors py-3 border-t border-black/5"
+          >
+            <span className="uppercase tracking-widest text-xs font-semibold">
+              {isExpanded ? 'Hide Route Details' : 'View Route Details'}
+            </span>
+            {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+          </button>
 
-            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-                <ul className="space-y-2 pb-4">
-                    {tour.highlights.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-500">
-                            <span className="mt-1 min-w-[12px]">
-                                {tour.isCustom ? <MapPin size={12} className="text-brand-gold"/> : <Check size={12} className="text-brand-gold"/>}
-                            </span>
-                            <span>{item}</span>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+            <ul className="space-y-2 pb-4">
+              {tour.highlights.map((item, idx) => (
+                <li key={idx} className="flex items-start gap-3 text-sm text-gray-500">
+                  <span className="mt-1 min-w-[12px]">
+                    {tour.isCustom ? <MapPin size={12} className="text-brand-gold" /> : <Check size={12} className="text-brand-gold" />}
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
