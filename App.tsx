@@ -6,7 +6,6 @@ import TourCard from './TourCard';
 import Testimonials from './Testimonials';
 import Footer from './Footer';
 import FloatingCTA from './FloatingCTA';
-import SplashCursor from './SplashCursor';
 import { MAIN_TOURS, FAST_TOUR, GOOGLE_MAPS_LINK, FAQ_ITEMS } from './constants';
 import { Menu, Zap, X, ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -42,7 +41,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-brand-light text-brand-black font-sans selection:bg-brand-gold selection:text-white">
-      <SplashCursor />
+
 
       {/* Minimal Navbar */}
       <nav className="fixed top-0 left-0 w-full z-40 bg-brand-light/90 backdrop-blur-md border-b border-black/5">
@@ -98,15 +97,25 @@ const App: React.FC = () => {
                 <h3 className="text-2xl font-display font-bold text-brand-black mb-2">{FAST_TOUR.title}</h3>
                 <p className="text-gray-500 font-light text-sm max-w-lg">{FAST_TOUR.description}</p>
               </div>
-              <div className="flex items-center gap-8 border-t md:border-t-0 md:border-l border-black/5 pt-6 md:pt-0 md:pl-8">
-                <div>
-                  <span className="block text-sm text-gray-400 uppercase tracking-wider">Duration</span>
-                  <span className="text-brand-black font-display font-bold">{FAST_TOUR.duration}</span>
+              <div className="flex flex-col md:flex-row items-center gap-8 border-t md:border-t-0 md:border-l border-black/5 pt-6 md:pt-0 md:pl-8">
+                <div className="flex gap-8">
+                  <div>
+                    <span className="block text-sm text-gray-400 uppercase tracking-wider">Duration</span>
+                    <span className="text-brand-black font-display font-bold">{FAST_TOUR.duration}</span>
+                  </div>
+                  <div>
+                    <span className="block text-sm text-gray-400 uppercase tracking-wider">Price</span>
+                    <span className="text-xl text-brand-gold font-display font-bold">€{FAST_TOUR.price}</span>
+                  </div>
                 </div>
-                <div>
-                  <span className="block text-sm text-gray-400 uppercase tracking-wider">Price</span>
-                  <span className="text-xl text-brand-gold font-display font-bold">€{FAST_TOUR.price}</span>
-                </div>
+                {FAST_TOUR.bookingUrl && (
+                  <a
+                    href={FAST_TOUR.bookingUrl}
+                    className="w-full md:w-auto px-8 py-3 bg-brand-gold text-brand-black font-display font-bold uppercase tracking-widest text-xs hover:bg-brand-black hover:text-white transition-all duration-300 text-center"
+                  >
+                    Book Online
+                  </a>
+                )}
               </div>
             </div>
           </div>

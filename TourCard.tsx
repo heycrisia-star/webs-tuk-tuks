@@ -34,7 +34,29 @@ const TourCard: React.FC<TourCardProps> = ({ tour }) => {
           {tour.description}
         </p>
 
-        <div className="mt-auto">
+        <div className="mt-8 pt-6 border-t border-black/5">
+          {tour.bookingUrl ? (
+            <a
+              href={tour.bookingUrl}
+              className="group/btn w-full flex items-center justify-center gap-3 px-6 py-4 bg-brand-gold text-brand-black font-display font-bold uppercase tracking-widest text-sm hover:bg-brand-black hover:text-white transition-all duration-300"
+            >
+              Book Online
+              <Check size={18} className="group-hover/btn:translate-x-1 transition-transform" />
+            </a>
+          ) : (
+            <a
+              href="https://wa.me/34673017472"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group/btn w-full flex items-center justify-center gap-3 px-6 py-4 bg-white border border-brand-gold text-brand-black font-display font-bold uppercase tracking-widest text-sm hover:bg-brand-gold transition-all duration-300"
+            >
+              Contact to Book
+              <MapPin size={18} className="text-brand-gold" />
+            </a>
+          )}
+        </div>
+
+        <div className="mt-4">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="w-full flex items-center justify-between text-sm text-gray-400 hover:text-brand-black transition-colors py-3 border-t border-black/5"

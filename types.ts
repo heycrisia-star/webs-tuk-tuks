@@ -6,6 +6,7 @@ export interface Tour {
   description: string;
   highlights: string[];
   isCustom?: boolean;
+  bookingUrl?: string;
 }
 
 export interface Review {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { MessageCircle, Star, Map } from 'lucide-react';
-import { WHATSAPP_LINK, GOOGLE_REVIEW_LINK } from './constants';
+import { WHATSAPP_LINK, GOOGLE_REVIEW_LINK, FAREHARBOR_MAIN_FLOW } from './constants';
 
 const FloatingCTA: React.FC = () => {
   const commonClasses = "flex items-center justify-center gap-3 px-6 py-4 rounded-full shadow-lg transition-all duration-300 hover:-translate-y-1 w-64 pointer-events-auto";
@@ -11,9 +11,7 @@ const FloatingCTA: React.FC = () => {
 
       {/* 1. Book Now (Gold) - TOP */}
       <a
-        href={WHATSAPP_LINK}
-        target="_blank"
-        rel="noopener noreferrer"
+        href={FAREHARBOR_MAIN_FLOW}
         className={`${commonClasses} bg-brand-gold text-brand-black shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)]`}
       >
         <MessageCircle size={20} strokeWidth={2.5} />

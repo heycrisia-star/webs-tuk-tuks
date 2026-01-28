@@ -4,6 +4,8 @@ export const PHONE_NUMBER = "+34 673 01 74 72";
 export const WHATSAPP_LINK = "https://wa.me/34673017472";
 export const GOOGLE_REVIEW_LINK = "https://search.google.com/local/writereview?placeid=ChIJo8tM4lQIo2gRAmYhs8xQFPc&source=g.page.m.np._&laa=nmx-review-solicitation-promoted-recommendation-card";
 export const GOOGLE_MAPS_LINK = "https://maps.app.goo.gl/HyZqCBggSxv58c8Y6";
+export const FAREHARBOR_MAIN_FLOW = "https://fareharbor.com/embeds/book/experiencetuktuktours/?full-items=yes&flow=1552340";
+export const FAREHARBOR_GIFT_CARD = "https://fareharbor.com/embeds/book/experiencetuktuktours/items/698266/?full-items=yes&flow=1552340";
 
 export const SOCIAL_LINKS: SocialLink[] = [
   { platform: 'instagram', url: 'https://www.instagram.com/experiencetuktuktours', label: 'Instagram' },
@@ -17,7 +19,8 @@ export const FAST_TOUR: Tour = {
   duration: '30 Minutes',
   price: 50,
   description: 'A quick yet immersive glimpse of Madrid tailored for first-time experiences.',
-  highlights: ['Centro de Madrid', 'Quick Overview', 'First Experience']
+  highlights: ['Centro de Madrid', 'Quick Overview', 'First Experience'],
+  bookingUrl: 'https://fareharbor.com/embeds/book/experiencetuktuktours/items/698257/?full-items=yes&flow=1552340'
 };
 
 export const MAIN_TOURS: Tour[] = [
@@ -28,11 +31,12 @@ export const MAIN_TOURS: Tour[] = [
     price: 100,
     description: 'The essential historic tour covering the architectural heart of the city.',
     highlights: [
-      'Palacio Real', 'Catedral de la Almudena', 'Jardines de Oriente', 'Teatro Real', 
-      'Muralla Árabe', 'San Francisco el Grande', 'Barrio La Latina', 'Barrio de las Letras', 
-      'Fuente de Neptuno', 'Museo del Prado', 'Iglesia de los Jerónimos', 'Casón del Buen Retiro', 
+      'Palacio Real', 'Catedral de la Almudena', 'Jardines de Oriente', 'Teatro Real',
+      'Muralla Árabe', 'San Francisco el Grande', 'Barrio La Latina', 'Barrio de las Letras',
+      'Fuente de Neptuno', 'Museo del Prado', 'Iglesia de los Jerónimos', 'Casón del Buen Retiro',
       'Parque del Retiro', 'Puerta de Alcalá', 'Fuente de Cibeles', 'Four Seasons', 'Canalejas', 'Plaza Santa Ana'
-    ]
+    ],
+    bookingUrl: 'https://fareharbor.com/embeds/book/experiencetuktuktours/items/698262/?full-items=yes&flow=1552340'
   },
   {
     id: 'maxi',
@@ -48,7 +52,8 @@ export const MAIN_TOURS: Tour[] = [
       'Gran Vía',
       'Plaza de España',
       'Hotel RIU'
-    ]
+    ],
+    bookingUrl: 'https://fareharbor.com/embeds/book/experiencetuktuktours/items/698263/?full-items=yes&flow=1552340'
   },
   {
     id: 'total',
@@ -62,7 +67,8 @@ export const MAIN_TOURS: Tour[] = [
       'Paseo de la Castellana',
       'Torres Business Area',
       'Estadio Santiago Bernabéu'
-    ]
+    ],
+    bookingUrl: 'https://fareharbor.com/embeds/book/experiencetuktuktours/items/698265/?full-items=yes&flow=1552340'
   },
   {
     id: 'custom',

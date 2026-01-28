@@ -1,5 +1,5 @@
 import React from 'react';
-import { WHATSAPP_LINK } from './constants';
+import { FAREHARBOR_MAIN_FLOW } from './constants';
 import { ArrowRight, Star } from 'lucide-react';
 import GradientBlinds from './GradientBlinds';
 
@@ -53,9 +53,7 @@ const Hero: React.FC = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 animate-fade-in-up [animation-delay:600ms]">
           <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={FAREHARBOR_MAIN_FLOW}
             className="group px-8 py-4 bg-brand-gold text-brand-black font-display font-bold text-lg uppercase tracking-widest rounded-none hover:bg-brand-black hover:text-white transition-all duration-300 flex items-center gap-3"
           >
             Book Now

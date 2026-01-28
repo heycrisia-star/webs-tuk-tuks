@@ -1,5 +1,5 @@
 import React from 'react';
-import { SOCIAL_LINKS, PHONE_NUMBER } from './constants';
+import { SOCIAL_LINKS, PHONE_NUMBER, FAREHARBOR_GIFT_CARD } from './constants';
 import { Phone, Mail, MapPin, Instagram } from 'lucide-react';
 
 // Custom icons for platforms not in standard Lucide import or to ensure specific look
@@ -40,10 +40,17 @@ const Footer: React.FC<FooterProps> = ({ onOpenFaq }) => {
         <button
           id="faq"
           onClick={onOpenFaq}
-          className="text-base md:text-lg font-display font-bold uppercase tracking-[0.2em] text-gray-500 hover:text-brand-black transition-colors mb-10 border-b border-transparent hover:border-brand-gold pb-1"
+          className="text-base md:text-lg font-display font-bold uppercase tracking-[0.2em] text-gray-500 hover:text-brand-black transition-colors mb-6 border-b border-transparent hover:border-brand-gold pb-1"
         >
           Read Frequently Asked Questions
         </button>
+
+        <a
+          href={FAREHARBOR_GIFT_CARD}
+          className="text-sm font-display font-bold uppercase tracking-[0.2em] text-brand-gold hover:text-brand-black transition-colors mb-10 border border-brand-gold px-6 py-2 hover:bg-brand-gold"
+        >
+          Buy a Gift Card
+        </a>
 
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-display font-bold uppercase tracking-wider mb-8 text-brand-black">
